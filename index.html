@@ -268,15 +268,70 @@
         }
         .about-creds {
             display: flex;
-            gap: 2rem;
+            gap: 1rem;
             flex-wrap: wrap;
             margin-top: 2rem;
         }
         .cred {
             background: rgba(255,255,255,0.1);
-            padding: 0.75rem 1.25rem;
+            padding: 0.5rem 1rem;
             border-radius: 8px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+        }
+
+        /* Certifications */
+        .certifications {
+            background: var(--light);
+        }
+        .cert-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .cert-group {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid #e2e8f0;
+        }
+        .cert-group h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .cert-group h3 .icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+        .cert-list {
+            list-style: none;
+        }
+        .cert-list li {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+        .cert-list li:last-child {
+            border-bottom: none;
+        }
+        .cert-list .cert-name {
+            font-weight: 500;
+        }
+        .cert-list .cert-detail {
+            color: var(--gray);
+            font-size: 0.85rem;
         }
 
         /* Why section */
@@ -322,7 +377,7 @@
 
         /* Contact */
         .contact {
-            background: var(--light);
+            background: white;
         }
         .contact-grid {
             max-width: 800px;
@@ -368,6 +423,7 @@
             .why-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
             nav .links { display: none; }
+            .cert-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -378,6 +434,7 @@
             <div class="links">
                 <a href="#services">Services</a>
                 <a href="#about">About</a>
+                <a href="#certifications">Credentials</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
@@ -472,13 +529,99 @@
             <div class="about-text">
                 <p><strong>Here's the deal:</strong> I got into cybersecurity because I genuinely love solving these problems. Not to sell you expensive tools you don't need. Not to scare you into a long-term contract. Just to help organizations do security <em>well</em>.</p>
                 <p>I've worked with local governments, mid-sized companies, and growing organizations who all had the same challenge: they knew security mattered, but didn't know where to start (or who to trust).</p>
-                <p>My background in cybersecurity means I understand your world — especially if you're trying to protect sensitive data while keeping systems running smoothly. I've been in your shoes.</p>
+                <p>With a cybersecurity degree and <strong>15+ industry certifications</strong> including CCSP, SSCP, CySA+, PenTest+, and Security+, I bring real expertise — not just theory. I've been in your shoes and understand what it takes to secure systems in the real world.</p>
                 <p><strong>I'm not a big consulting firm.</strong> When you hire me, you get me — not a junior associate who Googles things. I answer my own emails, show up to every meeting, and actually care whether this works for you.</p>
                 <div class="about-creds">
                     <span class="cred">🎓 Cybersecurity Degree</span>
-                    <span class="cred">🛡️ vCISO Experience</span>
-                    <span class="cred">🔐 Penetration Testing</span>
+                    <span class="cred">☁️ CCSP</span>
+                    <span class="cred">🔐 SSCP</span>
+                    <span class="cred">🔍 CySA+</span>
+                    <span class="cred">💻 PenTest+</span>
+                    <span class="cred">🛡️ Security+</span>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="certifications" id="certifications">
+        <h2>Credentials & Certifications</h2>
+        <p class="subtitle">Backed by industry-recognized certifications across security, cloud, and IT operations.</p>
+        <div class="cert-grid">
+            <div class="cert-group">
+                <h3><span class="icon">🔒</span> ISC2 Certifications</h3>
+                <ul class="cert-list">
+                    <li>
+                        <span class="cert-name">CCSP</span>
+                        <div class="cert-detail">Certified Cloud Security Professional</div>
+                    </li>
+                    <li>
+                        <span class="cert-name">SSCP</span>
+                        <div class="cert-detail">Systems Security Certified Practitioner</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cert-group">
+                <h3><span class="icon">🛡️</span> CompTIA Security</h3>
+                <ul class="cert-list">
+                    <li>
+                        <span class="cert-name">CySA+</span>
+                        <div class="cert-detail">Cybersecurity Analyst</div>
+                    </li>
+                    <li>
+                        <span class="cert-name">PenTest+</span>
+                        <div class="cert-detail">Penetration Testing</div>
+                    </li>
+                    <li>
+                        <span class="cert-name">Security+</span>
+                        <div class="cert-detail">Security Fundamentals</div>
+                    </li>
+                    <li>
+                        <span class="cert-name">CSIS</span>
+                        <div class="cert-detail">Secure Infrastructure Specialist</div>
+                    </li>
+                    <li>
+                        <span class="cert-name">CSAP</span>
+                        <div class="cert-detail">Security Analytics Professional</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cert-group">
+                <h3><span class="icon">💻</span> CompTIA Core</h3>
+                <ul class="cert-list">
+                    <li>
+                        <span class="cert-name">A+</span>
+                        <div class="cert-detail">IT Fundamentals</div>
+                    </li>
+                    <li>
+                        <span class="cert-name">Network+</span>
+                        <div class="cert-detail">Networking</div>
+                    </li>
+                    <li>
+                        <span class="cert-name">Project+</span>
+                        <div class="cert-detail">Project Management</div>
+                    </li>
+                    <li>
+                        <span class="cert-name">CIOS</span>
+                        <div class="cert-detail">IT Operations Specialist</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cert-group">
+                <h3><span class="icon">📋</span> Additional Credentials</h3>
+                <ul class="cert-list">
+                    <li>
+                        <span class="cert-name">ITIL</span>
+                        <div class="cert-detail">IT Service Management</div>
+                    </li>
+                    <li>
+                        <span class="cert-name">Linux Essentials</span>
+                        <div class="cert-detail">LPI Certification</div>
+                    </li>
+                    <li>
+                        <span class="cert-name">FEMA/DHS</span>
+                        <div class="cert-detail">Cybersecurity Incident Response & Management</div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
